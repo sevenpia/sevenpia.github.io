@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>구구단 프로그램</title>
+</head>
+<body>
+  <p class="t1">구구단을 읽어보자</p>
+
+<script>
+  // 단을 입력받는다.  3단
+
+  const dan = Number(prompt('몇단을 출력할까요?',""));
+  console.log(dan);
+  document.write('<br>');
+
+  var i=1;
+  var d=9; 
+
+  for(i=1;i<d+1;i++){
+    document.write(`${dan}*${i} = ${dan*i}`);
+    document.write('<br>');
+  }
+
+  const ccc =  document.querySelector('.t1');
+  ccc.style.cssText = "padding: 20px 0; color: blue; background-color: pink";
+  
+</script>
+
+</body>
+</html>
