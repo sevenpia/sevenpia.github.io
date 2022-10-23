@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="images/fb.png" alt="facebook" width="32" height="32">
+
+    <script>
+        function normalImg(x) {
+            x.style.height = "32px";
+            x.style.width = "32px";
+            x.style = "border:none";
+        }
+
+        function bigImg(x) {
+            x.style.border = "1px solid #00f";
+            x.style.border_radius = "5px";
+            //x.style.background = "#f00";
+            //x.style.background = "rgba(50,255,55,0.6)";
+            x.style.height = "32px";
+            x.style.width = "32px";
+        }
+    </script>
+
+</body></html>

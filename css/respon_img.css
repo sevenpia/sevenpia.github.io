@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+img {
+    border: 0;
+}
+
+body {
+    font-family: "맑은 고딕", Malgun Gothic, arial, sans-serif;
+}
+
+.clear::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.img_wrap {
+    /*  width: 1200px;*/
+    max-width: 1200px;
+    width: 100%;
+    background: #f00;
+    margin: 0 auto;
+}
+
+.img_wrap img {
+    display: block;
+    width: 100%;
+}
+
+
+.bgbox {
+    max-width: 1200px;
+    padding-bottom: 50%;
+    margin: 0 auto;
+    /*    background-image: url(https://t4.ftcdn.net/jpg/04/81/41/97/360_F_481419706_suiSEIertY741Z6rEy3Lj2pv6zzSNKZu.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;*/
+
+
+    background: url(https://t4.ftcdn.net/jpg/04/81/41/97/360_F_481419706_suiSEIertY741Z6rEy3Lj2pv6zzSNKZu.jpg) no-repeat center center;
+    background-size: cover;
+
+}

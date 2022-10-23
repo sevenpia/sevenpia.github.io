@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS</title>
+    <style>
+      body {
+        box-sizing: border-box;
+        margin: 0px;
+        font-family: Consolas, monospace;
+      }
+      .jb-container {
+        height: 100vh;
+        background-color: #01579b;
+        display: flex;
+      }
+      .jb-item {
+        padding: 20px;
+      }
+      .jb-item:nth-child(1) {
+        background-color: #e3f2fd;
+      }
+      .jb-item:nth-child(2) {
+        background-color: #bbdefb;
+        font-size: 2em;
+      }
+      .jb-item:nth-child(3) {
+        background-color: #90caf9;
+        font-size: 3em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="jb-container">
+      <div class="jb-item">Item 1</div>
+      <div class="jb-item">Item 2</div>
+      <div class="jb-item">Item 3</div>
+    </div>
+  </body>
+</html>

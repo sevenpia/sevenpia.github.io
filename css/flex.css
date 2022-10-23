@@ -1,0 +1,166 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+body {
+    font-family: "맑은 고딕", Malgun Gothic, arial, sans-serif;
+}
+
+.clear::after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+/* 메뉴*/
+.overlay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #40C4FF;
+    opacity: 0;
+    height: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+.overlay.visible{
+    opacity: 1;
+    height: 100vh;
+    visibility:visible;
+}
+
+ul.menu {
+    margin: 0 auto;
+    color: #fff;
+    font-size: 32px;
+}
+
+ul.menu li {
+    width: 200px;
+    margin: 0 auto;
+    padding: 5px;
+    transition: 0.2s;    
+}
+
+ul.menu li:hover a {
+    color: #eee;
+}
+/*
+
+.overlay.visible .menu li{
+    animation: move 0.2s ease forwards;
+}
+
+@keyframes move {
+    0%{opacity: 0; transform: translate(-25%);}
+    100%{opacity: 1; transform: translate(0);}
+}
+
+.overlay.visible ul.menu li:nth-child(1){
+    animation-delay: 0.23s;
+}
+.overlay.visible ul.menu li:nth-child(2){
+    animation-delay: 0.26s;
+}
+.overlay.visible ul.menu li:nth-child(3){
+    animation-delay: 0.29s;
+}
+.overlay.visible ul.menu li:nth-child(4){
+    animation-delay: 0.32s;
+}
+*/
+
+
+.overlay.visible ul li{
+    animation: move 0.2s ease forwards;
+}
+
+
+@keyframes move {
+    0%{opacity: 0; transform: translate(-25%);}
+    100%{opacity: 1; transform: translate(0);}
+}
+
+
+.overlay.visible ul.menu li:nth-child(1){
+    animation-delay: 0.23s;
+}
+
+.overlay.visible ul.menu li:nth-child(2){
+    animation-delay: 0.26s;
+}
+
+.overlay.visible ul.menu li:nth-child(3){
+    animation-delay: 0.29s;
+}
+
+.overlay.visible ul.menu li:nth-child(4){
+    animation-delay: 0.32s;
+}
+
+
+
+/*모바일 버튼 */
+
+.mobtn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 45px;
+    height: 34px;
+}
+
+.mobtn span{
+    position: absolute;
+    width: 100%;
+    height: 8px;
+    background: #666;
+    top: 0;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+
+.mobtn.active span{
+    background: #fff;    
+}
+
+.mobtn span:nth-child(1) {
+    top: 0;
+}
+
+.mobtn span:nth-child(2) {
+    top: 13px;
+}
+
+.mobtn span:nth-child(3) {
+    top: 13px;
+}
+
+.mobtn span:nth-child(4) {
+    top: 26px;
+}
+
+.mobtn.active span:nth-child(1),
+.mobtn.active span:nth-child(4){
+    opacity:0;
+}
+.mobtn.active span:nth-child(2){
+    transform:rotate(45deg);
+}
+.mobtn.active span:nth-child(3){
+    transform:rotate(-45deg);
+}

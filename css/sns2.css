@@ -1,0 +1,133 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    font-size: 15px;
+}
+
+img {
+    border: 0;
+}
+
+.clear::after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+body {
+    font-family: "맑은 고딕", malgunGothic, arial, sans-serif;
+    color: #666;
+    font-size: 16px;
+}
+
+
+.sns_wrap {
+    width: 300px;
+    height: 100px;
+    margin: 0 auto;
+    border: 1px solid #00f;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+
+ul.sns {
+    width: 230px;
+    height: 100px;
+    line-height: 100px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+ul.sns li {
+    float: left;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    margin-right: 20px;
+    margin-top: 25px;
+}
+ul.sns li:nth-child(1) {
+    margin-left: 20px;
+}
+
+
+/* 컬러가 있는 아이콘을 만들고
+그레이필터로 회색톤 아이콘을 만든다.
+filter: grayscale(100%);
+포토샵에서 컬러버튼만 만들고
+회색버튼을 만들필요가 없다. 
+*/
+
+ul.sns li span.bt1 {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url(../images/tw.png) no-repeat 50% 50%;
+    -webkit-background-size: 50px;
+    background-size: 50px;
+    cursor: pointer;
+    filter: grayscale(100%);
+}
+
+ul.sns li span.bt2 {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url(../images/fb.png) no-repeat 50% 50%;
+    -webkit-background-size: 50px;
+    background-size: 50px;
+    filter: grayscale(100%);
+}
+
+ul.sns li span.bt3 {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url(../images/ins.png) no-repeat 50% 50%;
+    filter: grayscale(100%);
+    -webkit-background-size: 50px;
+    background-size: 50px;
+}
+
+
+ul.sns li a {
+    display: block;
+}
+
+
+/*그레이필터로 만든 아이콘을 그레이필터0% 로설정
+색상이 나오도록 한다. */
+
+ul.sns li:hover span.bt1 {
+    -webkit-background-size: 50px;
+    background-size: 50px;
+    filter: grayscale(0%);
+}
+
+ul.sns li:hover span.bt2 {
+/*    background: url(../images/fb.png) no-repeat 50% 50%;*/
+    -webkit-background-size: 50px;
+    background-size: 50px;
+    filter: grayscale(0%);
+}
+
+ul.sns li:hover span.bt3 {
+/*    background: url(../images/ins.png) no-repeat 50% 50%;*/
+    filter: grayscale(0%);
+    -webkit-background-size: 50px;
+    background-size: 50px;
+}
+
+

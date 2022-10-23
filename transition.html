@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+    <meta charset="utf-8">
+    <title>CSS</title>
+    <style>
+        body {
+            font-family: Consolas, monospace;
+        }
+
+        .jba,
+        .jbb {
+            box-sizing: border-box;
+            width: 0px;
+            height: 3px;
+            margin: 10px 0px;
+            background-color: orange;
+            transition-duration: 0.7s;
+            transition-delay: 0.1s;
+
+        }
+
+        /*  input:checked~.jb {
+            width: 100%;
+        }*/
+
+        .jb1,
+        .jb2 {
+            /*
+            transition-delay: 0.1s;
+*/
+        }
+
+        .p1,
+        .p2 {
+            width: 200px;
+            height: 40px;
+            border: 1px solid #f00;
+            display: block;
+        }
+
+
+        .p1:hover~.jba,
+        .p2:hover~.jbb {
+            width: 200px;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+    <input type="checkbox">
+
+    <p class="p1">transition-delay: 0.1s;</p>
+    <div class="jba jb1"></div>
+
+
+    <p class="p2">transition-delay: 0.1s;</p>
+    <div class="jbb jb2"></div>
+
+</body></html>

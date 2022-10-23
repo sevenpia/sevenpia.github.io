@@ -1,0 +1,149 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+    font-size: 22px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    border: 0;
+}
+
+body {
+    font-family: "맑은 고딕", MalgunGothic, arial, sans-serif;
+    font-size: 16px;
+    color: #666;
+}
+
+.ham4_btn {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    width: 45px;
+    height: 34px;
+    z-index: 1;
+}
+
+.ham4_btn span {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    background: #666;
+    transition: 0.2s;
+}
+
+.ham4_btn span:nth-child(1) {
+    top: 0;
+}
+
+.ham4_btn span:nth-child(2) {
+    top: 13px;
+}
+
+.ham4_btn span:nth-child(3) {
+    top: 13px;
+}
+
+.ham4_btn span:nth-child(1) {
+    top: 26px;
+}
+
+.ham4_btn.active span:nth-child(1),
+.ham4_btn.active span:nth-child(4) {
+    opacity: 0;
+}
+
+.ham4_btn.active span:nth-child(2) {
+    transform: rotate(45deg);
+    background: #fff;
+}
+
+.ham4_btn.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    background: #fff;
+}
+
+
+/*메뉴 리스트들*/
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #81D4FA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s;
+}
+
+.overlay.visible {
+    height: 100%;
+    opacity: 0.8;
+    visibility: visible;
+}
+
+.overlay ul li {
+    display: block;
+    margin-bottom: 1em;
+    color: #fff;
+    opacity: 0.75;
+    transition: 0.2s;
+    font-size: 1.5em;
+}
+
+.overlay ul li:hover {
+    opacity: 1;
+}
+
+@keyframes move {
+    0% {
+        opacity: 0;
+        transform: translate(-25%);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.overlay.visible ul li {
+    animation: move 0.3s ease forwards;
+}
+
+.overlay.visible ul li:hover {
+    color: #eee;
+}
+
+.overlay.visible ul li:nth-child(1) {
+    animation-delay: 0.23s;
+}
+
+.overlay.visible ul li:nth-child(2) {
+    animation-delay: 0.26s;
+}
+
+.overlay.visible ul li:nth-child(3) {
+    animation-delay: 0.29s;
+}
+
+.overlay.visible ul li:nth-child(4) {
+    animation-delay: 0.32s;
+}

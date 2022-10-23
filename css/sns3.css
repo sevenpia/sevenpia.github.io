@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: arial, "맑은 고딕", "Malgun Gothic", sans-serif;
+    font-size: 15px;
+    color: #666;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    border: 0;
+}
+
+.sns_wrap {
+    width: 300px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.sns_wrap ul.sns {
+    width: 230px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.sns_wrap ul.sns li {
+    float: left;
+    margin-top: 25px;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+.sns_wrap ul.sns li:nth-child(1) {
+    margin-left: 20px;
+}
+
+.sns_wrap ul.sns li span.bt1 {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url(../images/tw.png) no-repeat 50% 50%;
+    -webkit-background-size: 50px;
+    background-size: 50px;
+    filter: grayscale(100%);
+}
+
+.sns_wrap ul.sns li span.bt2 {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url(../images/fb.png) no-repeat 50% 50%;
+    -webkit-background-size: 50px;
+    background-size: 50px;
+    filter: grayscale(100%);
+}
+
+.sns_wrap ul.sns li span.bt3 {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url(../images/ins.png) no-repeat 50% 50%;
+    -webkit-background-size: 50px;
+    background-size: cover;
+    filter: grayscale(100%);
+}
+
+.sns_wrap ul.sns li a {
+    width: 100%;
+}
+
+.sns_wrap ul.sns li:hover span.bt1,
+.sns_wrap ul.sns li:hover span.bt2,
+.sns_wrap ul.sns li:hover span.bt3
+{
+    filter: grayscale(0%);
+}

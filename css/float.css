@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+ul {
+    border: 1px solid #f00;
+    /*overflow: hidden;*/
+}
+
+
+
+.clearfix::after {
+    clear: both;
+    content: "";
+    display:block;
+    background: #0f0;
+}
+
+
+
+li {
+    float: left;
+    padding: 20px;
+    width: 300px;background: #ff0;
+}
+
+
+
+/*
+footer{
+    clear: both;
+    border: 1px solid #00f;
+}*/

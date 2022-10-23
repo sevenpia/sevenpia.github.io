@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+div{
+    position: relative;
+    margin: 50px auto;
+    width: 200px;
+    height: 100px;
+    line-height: 100px;
+    background: #55eebb;
+    text-align: center;
+    color: #fff;
+    transition: 0.4s;
+}
+
+div:hover {
+    background: #00ffff;
+    margin: 30px auto;
+}

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>CSS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            box-sizing: border-box;
+            font-family: Consolas, monospace;
+        }
+        
+        ul,
+        li {
+            list-style: none;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .jb-a {
+            width: 150px;
+            margin: 0px auto;
+            position: relative;
+            background: #f00;
+        }
+        
+        .jb-c {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            display: none;
+        }
+        
+        .jb-a:hover .jb-c {
+            display: block;
+        }
+        
+        ul.jb-a li {
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hover Effect</h1>
+    <!--
+    <div class="jb-a"> <img src="images/icon1.jpg" alt="" class="jb-b"> <img src="images/icon2.jpg" alt="" class="jb-c"> </div>
+-->
+    <ul class="jb-a">
+        <li><img src="images/icon1.jpg" alt="" class="jb-b"> </li>
+        <li> <img src="images/icon2.jpg" alt="" class="jb-c"> </li>
+    </ul>
+</body>
+
+</html>

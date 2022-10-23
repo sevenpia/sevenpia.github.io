@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>햄버거-메인메뉴들</title>
+    <link rel="stylesheet" href="css/ham_menu.css">
+    <script src="js/jquery-1.12.3.js"></script>
+    <script src="js/ham_menu.js"></script>
+</head>
+<body>
+  
+<!--ham4_btn에 .active가 붙으면 span 의 모양이 변한다. -->
+   <a href="#" class="ham4_btn">
+       <span></span>
+       <span></span>
+       <span></span>
+       <span></span>
+   </a>
+
+<!--
+css에서 먼저 만들 사항들
+1. overlay: overlay에 .visible이 붙으면 위에서 내려오면서 나오도록 
+opacity 도 1이 되도록 한다. 
+2. ul li 왼쪽에서  시간차를 두고 나오면서 opacity도 1 이 되도록 한다. 
+-->
+
+  <div class="overlay">
+     <ul class="menu">
+         <li><a href="#">html5</a></li>
+         <li><a href="#">css3</a></li>
+         <li><a href="#">javascript</a></li>
+         <li><a href="#">jquery</a></li>
+     </ul>
+  </div>
+   
+</body>
+</html>

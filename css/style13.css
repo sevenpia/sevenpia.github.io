@@ -1,0 +1,389 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* 156 line: 화면너비가 1024픽셀 이하일때 */
+/* 186 line: 화면너비가 768픽셀 이하일때 */
+/* 346 line: 화면너비가 480픽셀 이하일때 */
+
+img {
+    border: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+body{
+    font-family: "맑은 고딕", MalgunGothic, arial, sans-serif;
+    color: #666;
+    font-size: 16px;
+}
+
+clear::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.wrap {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background: #aaa;
+    position: relative;
+    z-index: 1;
+}
+
+header h1 {
+    float: left;
+    padding-top: 30px;
+}
+
+header nav {
+    float: right;
+    padding-top: 30px;
+}
+
+header nav ul.gnb {
+    width: 800px;
+}
+
+header nav ul.gnb > li {
+    width: 25%;
+    float: left;
+    line-height: 40px;
+    text-align: center;
+    position: relative;
+}
+
+header nav ul.gnb > li > a {
+    display: block;
+    background: #c88;
+    color: #fff;
+
+
+}
+
+header nav ul.gnb > li:hover > a {
+    background: #c11;
+    font-weight: bold;
+}
+
+header nav ul.gnb > li ul.sub {
+    background: #eee;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 160px;
+    display: none;
+}
+
+header nav ul.gnb > li ul.sub li {
+    width: 100%;
+    color: #666;
+
+}
+
+header nav ul.gnb > li ul.sub li a {
+    display: block;
+}
+
+header nav ul.gnb > li ul.sub li:hover {
+    background: #c55;
+    color: #fff;
+    font-weight: bold;
+}
+
+
+/*메인 슬라이더 */
+.slider {
+    position: relative;
+    width: 100%;
+    background: #bbb;
+    height: 250px;
+}
+
+.slider ul.slider_all {
+    width: 100%;
+}
+
+.slider ul.slider_all li {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+.slider ul.slider_all li a {
+    display: block;
+}
+
+.slider ul.slider_all img {
+    width: 100%;
+}
+
+
+
+
+/*컨텐츠*/
+
+.contents {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background: #ccc;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background: #ddd;
+}
+
+
+
+/* *******************화면너비가 1024픽셀 이하일때 ******************** */
+
+@media screen and (max-width: 1024px) {
+    header {
+        background: #51bbc9;
+    }
+
+    header h1 img {
+        width: 85%;
+    }
+
+    header nav ul.gnb {
+        width: 560px;
+    }
+
+    .slider {
+        background: #51bb00;
+        height: 190px;
+    }
+
+    .contents {
+        background: #00bbc9;
+    }
+
+    footer {
+        background: #51ffc9;
+    }
+
+}
+
+
+/* *******************화면너비가 768픽셀 이하일때 ******************** */
+
+@media screen and (max-width: 768px) {
+    header {
+        background: ##FF5555;
+    }
+
+    /*
+    1. ease: 빠른 느낌 ( slow fast slow)
+    2. ease-out: 마지막이 느리다. ease 느낌
+    3. linear: 등속 
+    4. ease-in-out: 처음과 마지막이 느리다. 약간 등속느낌
+    5. ease-in: 처음이 느리다.
+*/
+
+    header nav {
+        position: relative;
+        opacity: 0;
+        top: 50px;
+        right: 0px;
+        transition: 0.5s ease-out;
+        visibility: hidden;
+    }
+
+    header nav.visible {
+        top: 50px;
+        right: 20px;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    header nav ul.gnb {
+        width: 100px;
+    }
+
+    header nav ul.gnb > li {
+        width: 100%;
+        line-height: 40px;
+        text-align: center;
+
+    }
+
+    header nav ul.gnb > li > a {
+        display: block;
+        background: #c88;
+        color: #fff;
+    }
+
+    header nav ul.gnb > li:hover > a {
+        background: #c11;
+        font-weight: bold;
+    }
+
+
+    header nav ul.gnb > li ul.sub {
+        background: #eee;
+        position: relative;
+        width: 100%;
+        top: 0;
+    }
+
+    header nav ul.gnb > li ul.sub li {
+        width: 100%;
+        color: #666;
+
+    }
+
+    header nav ul.gnb > li ul.sub li a {
+        display: block;
+
+    }
+
+    header nav ul.gnb > li ul.sub li:hover {
+        background: #c55;
+        color: #fff;
+        font-weight: bold;
+    }
+
+
+    /*    모바일 삼선버튼 */
+
+    .ham {
+        position: absolute;
+        top: 30px;
+        right: 35px;
+        width: 45px;
+        height: 34px;
+        z-index: 10;
+        cursor: pointer;
+        display: block;
+    }
+
+    .ham span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 0.2s ease-out;
+    }
+
+    .ham span:nth-child(1) {
+        display: block;
+        width: 100%;
+        height: 8px;
+        background: #005555;
+        border-radius: 4px;
+        position: absolute;
+        top: 0;
+    }
+
+
+    .ham span:nth-child(2),
+    .ham span:nth-child(3) {
+        display: block;
+        width: 100%;
+        height: 8px;
+        background: #005555;
+        border-radius: 4px;
+        top: 13px;
+    }
+
+    .ham span:nth-child(4) {
+        display: block;
+        width: 100%;
+        height: 8px;
+        background: #005555;
+        border-radius: 4px;
+        top: 26px;
+    }
+
+
+    .ham.click span:nth-child(1),
+    .ham.click span:nth-child(4) {
+        display: none;
+    }
+
+    .ham.click span:nth-child(2) {
+        transform: rotate(45deg);
+    }
+
+    .ham.click span:nth-child(3) {
+        transform: rotate(-45deg);
+    }
+
+    
+    
+    .slider {
+        background: #005555;
+        height: 120px;
+    }
+
+
+    .contents {
+        background: #FF0088;
+    }
+
+    footer {
+        background: ##111177;
+    }
+
+}
+
+
+/* *******************화면너비가 480픽셀 이하일때 ******************** */
+
+@media screen and (max-width: 480px) {
+    header {
+        background: #c28214;
+    }
+
+    .ham {
+        right: 30px;
+    }
+
+
+    .slider {
+        background: #c28299;
+        height: 80px;
+    }
+
+    .slider .slider_all img {
+        width: 200%;
+    }
+
+
+    .contents {
+        background: #c28814;
+    }
+
+    footer {
+        background: #aa8214;
+    }
+
+
+
+}

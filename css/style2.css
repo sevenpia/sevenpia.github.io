@@ -1,0 +1,419 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+img {
+    border: none;
+}
+
+.clear::after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+
+body {
+    font-family: "맑은고딕", malgunGothic, arial, sans-serif;
+    font-size: 15px;
+    color: #333;
+}
+
+
+.wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header,
+footer,
+section,
+nav {
+    display: block;
+}
+
+
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 10;
+    display: none;
+}
+.modal_inner {
+    position: absolute; 
+    width: 500px; 
+    height: 500px;
+    background: #fff; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+
+.modal_inner .motitle {font-weight: bold; font-size: 20px;
+text-align: center; padding: 20px;}
+.modal_inner .mocon { padding: 20px;}
+.modal_inner button {
+    width: 100px;
+    height: 30px;
+    background: #ccc;
+    position: absolute; 
+    right: 20px;
+    bottom: 20px;
+    
+    cursor: pointer;
+    
+}
+.modal_inner button:hover {
+    background: #c88;
+}
+
+
+header {
+    width: 1200px;
+    height: 100px;
+    position: relative;
+    z-index: 1;
+}
+
+
+header h1 {
+    padding-top: 30px;
+    float: left;
+}
+
+header nav {
+    width: 800px;
+    float: right;
+    padding-top: 30px;
+}
+
+header nav ul.gnb {
+    float: left;
+}
+
+header nav ul.gnb > li {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    float: left;
+    position: relative;
+    background: #cb9;
+}
+
+header nav ul.gnb > li > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+header nav ul.gnb > li:hover > a {
+    background: #c88;
+}
+
+
+header nav ul.gnb > li > ul.sub {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background: #cc9;
+    height: 160px;
+    display: none;
+}
+
+header nav ul.gnb > li > ul.sub > li {
+    width: 200px;
+}
+
+header nav ul.gnb > li > ul.sub > li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+header nav ul.gnb > li > ul.sub > li:hover a {
+    background: #c88;
+    color: #fff;
+    font-weight: bold;
+}
+
+
+
+/*슬라이더 */
+
+.slider {
+    width: 1200px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider .slider_all {
+    position: relative;
+}
+
+.slider .slider_all li {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.slider .slider_all li span.txt{
+    position: absolute; 
+    display: block;
+    top: 50%;
+    left: 50%;
+    padding: 20px;
+    background: rgba(0,0,0,0.5);
+    width: 500px;
+    height: 40px;
+    border-radius: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+
+
+/*컨텐츠*/
+.contents {
+    width: 1200px;
+    height: 200px;
+}
+
+
+
+.contents h2 {
+    font-size: 16px;
+    font-weight: bold;
+    width: 100px;
+    height: 40px;
+    background: #cb9;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 15px 15px 0 0;
+    cursor: pointer;
+}
+
+
+
+.contents section.con1 {
+    width: 500px;
+    height: 200px;
+    float: left;
+    position: relative;
+}
+
+
+.contents section.con1 h2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.contents section.con1 ul {
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    display: none;
+}
+
+
+.contents h2:hover {
+    background: #c88;
+}
+
+
+
+
+.contents section.con1 h2.on {
+    background: #c88;
+    display: block;
+}
+
+.contents section.con1 ul.on {
+    display: block;
+}
+
+.contents section.con1 h2.r100 {
+    margin-left: 101px;
+}
+
+
+.contents section.con1 ul.notice {
+    width: 100%;
+}
+
+.contents section.con1 ul.notice li {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+
+}
+
+.contents section.con1 ul.notice li a {
+    display: block;
+
+}
+
+.contents section.con1 ul.notice li:hover a {
+    color: #c88;
+    font-weight: bold;
+}
+
+
+
+.contents section.con1 ul.notice li span.day {
+    position: absolute;
+    right: 10px;
+}
+
+.contents section.con1 ul.gallery {
+    padding-top: 15px;
+}
+
+.contents section.con1 ul.gallery li {
+    float: left;
+    padding-left: 10px;
+
+}
+
+.contents section.con1 ul.gallery li a {
+    display: block;
+}
+
+
+
+
+
+
+/*배너*/
+
+.contents section.con2 {
+    width: 350px;
+    height: 200px;
+    float: left;
+}
+
+.contents section.con2 img {
+    width: 350px;
+    height: 150px;
+    padding-top: 5px;
+}
+
+
+/*바로가기*/
+
+.contents section.con3 {
+    width: 350px;
+    height: 200px;
+    float: left;
+}
+
+.contents section.con3 ul.baro {}
+
+.contents section.con3 ul.baro li {
+    width: 80%;
+    border: 1px solid #c88;
+    margin: 0 auto;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 5px;
+}
+
+.contents section.con3 ul.baro li a {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.contents section.con3 ul.baro li:hover {
+    background: #c88;
+    color: #fff;
+    font-weight: bold;
+}
+
+
+
+/*풋터*/
+
+
+footer {
+    width: 1200px;
+    height: 100px;
+    font-size: 13px;
+}
+
+footer h3 {
+    width: 200px;
+    float: left;
+    padding-top: 30px;
+}
+
+footer ul.copyright {
+    width: 700px;
+    height: 100px;
+    float: left;
+    padding-top: 5px;
+    box-sizing: border-box;
+}
+
+footer ul.copyright li {
+    float: left;
+    height: 25px;
+    line-height: 25px;
+    padding-left: 30px;
+}
+
+footer ul.sns {
+    width: 300px;
+    height: 100px;
+    float: left;
+}
+
+footer ul.sns li {
+    float: left;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50px;
+    border: 1px solid #c88;
+    text-align: center;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+footer ul.sns li a {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+footer ul.sns li:hover {
+    background:#c88;
+    font-weight: bold;
+}

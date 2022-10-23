@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    font-size: 15px;
+}
+
+img {
+    border: 0;
+}
+
+.clear::after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+body {
+    font-family: "맑은 고딕", malgunGothic, arial, sans-serif;
+    color: #666;
+    font-size: 16px;
+}
+
+
+.sns_wrap {
+    width: 300px;
+    height: 100px;
+    margin: 0 auto;
+    border: 1px solid #00f;
+    text-align: center;
+}
+
+
+ul.sns {
+    width: 230px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0 auto;
+}
+
+ul.sns li {
+    float: left;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    margin-right: 20px;
+    margin-top: 25px;
+}
+ul.sns li:nth-child(1) {
+    margin-left: 20px;
+}
+
+ul.sns li span.bt1 {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url(../images/tw.png) no-repeat 50% 50%;
+    -webkit-background-size: 50px;
+    background-size: 50px;
+    cursor: pointer;
+}
+
+ul.sns li span.bt2 {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url(../images/fb.png) no-repeat 50% 50%;
+    -webkit-background-size: 50px;
+    background-size: 50px;
+}
+
+ul.sns li span.bt3 {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url(../images/ins.png) no-repeat 50% 50%;
+    -webkit-background-size: 50px;
+    background-size: 50px;
+}
+
+
+ul.sns li a {
+    display: block;
+}
+
+ul.sns li:hover span.bt1 {
+    background: url(../images/tw_g.png) no-repeat 50% 50%;
+    -webkit-background-size: 50px;
+    background-size: 50px;
+}
+
+ul.sns li:hover span.bt2 {
+    background: url(../images/fb_g.png) no-repeat 50% 50%;
+    -webkit-background-size: 50px;
+    background-size: 50px;
+}
+
+ul.sns li:hover span.bt3 {
+    background: url(../images/ins_g.png) no-repeat 50% 50%;
+    -webkit-background-size: 50px;
+    background-size: 50px;
+}
+
+

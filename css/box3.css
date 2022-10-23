@@ -1,0 +1,135 @@
+@charset "utf-8";
+
+/*기본세팅 */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    border: 0;
+}
+    
+body {
+    font-family: "맑은 고딕", Malgun Gothic, arial, sans-serif;
+    font-size: 16px;
+    color: #666;
+}
+
+.clear::after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+.wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background: #AFB42B;
+    animation: movetop 1.3s ease;
+}
+
+@keyframes movetop {
+    0% {
+        transform: translateY(30%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    /*
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+    */
+}
+
+.slider_wrap {
+    width: 100%;
+    height: 300px;
+    background: #FFB74D;
+}
+
+.box_wrap {
+    width: 1200px;
+    height: auto;
+    background: #FFF59D;
+    margin: 0 auto;
+}
+
+.box_wrap section.con1 {
+    position: relative;
+    width: 500px;
+    height: 200px;
+    background: #84FFFF;
+    float: left;
+    animation: move 0.5s ease;
+}
+
+@keyframes move {
+    0% {
+        top: 300px;
+        opacity: 0;
+    }
+    100% {
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+.box_wrap section.con2 {
+    position: relative;
+    width: 350px;
+    height: 200px;
+    background: #18FFFF;
+    float: left;
+    animation: move 0.5s ease;
+    animation-delay: 0.1s;
+}
+
+.box_wrap section.con3 {
+    position: relative;
+    width: 350px;
+    height: 200px;
+    background: #00E5FF;
+    float: left;
+    animation: move 0.5s ease;
+    animation-delay: 0.15s;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background: #D4E157;
+    animation: move 0.5s ease;
+    animation-delay: 0.2s;    
+}
+
+
+/*
+@media only screen and (max-width: 480px) {
+    .wrap{width: 100%;}
+    .box_wrap{width: 100%;}
+    section.con1 {float: none;}
+    section.con2 {float: none;}
+    section.con3 {float: none;}
+}
+*/

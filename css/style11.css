@@ -1,0 +1,254 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*sans-serif : 고딕체, 삐침이 없는 폰트*/
+
+body {
+    font-family: arial, "맑은 고딕", MalgunGothic, sans-serif;
+    font-size: 16px;
+    color: #666;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    border: 0;
+}
+
+.clear::after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+.wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    position: relative;
+    width: 1200px;
+    height: 100px;
+    background: #aaa;
+    z-index: 2;
+}
+
+header h1 {
+    float: left;
+    width: 200px;
+    height: 40px;
+    padding-top: 30px;
+}
+
+header nav {
+    float: right;
+    width: 800px;
+    padding-top: 30px;
+}
+
+header nav ul.gnb {
+    float: left;
+}
+
+header nav ul.gnb >li {
+    float: left;
+    width: 200px;
+    height: 40px;
+    background: #c88;
+    line-height: 40px;
+    text-align: center;
+    position: relative;
+    color: #fff;
+}
+
+header nav ul.gnb>li a {
+    width: 100%;
+    height: 40px;
+    display: block;
+}
+
+header nav ul.gnb >li:hover {
+    color: #fff;
+    font-weight: bold;
+    background: #f55;
+}
+
+header nav ul.gnb li ul.sub {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background: #eee;
+    width: 100%;
+    color: #666;
+/*    display: none;*/
+}
+
+header nav ul.gnb >li ul.sub li {
+    width: 100%;
+    height: 100%;
+}
+
+header nav ul.gnb >li ul.sub li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+header nav ul.gnb >li ul.sub li:hover {
+    color: #fff;
+    background: #e88;
+}
+
+.slider_wrap {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background: #bbb;
+    z-index: 1;
+}
+
+ul.slider {
+    width: 100px;
+    position: relative;
+}
+
+ul.slider li {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+ul.slider li a {
+    width: 100%;
+    height: 100%;
+}
+
+.contents {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background: #ccc;
+}
+
+.contents section.con1 {
+    width: 500px;
+    background: #111;
+    float: left;
+    height: 200px;
+}
+
+.contents section.con2 {
+    width: 350px;
+    background: #222;
+    float: left;
+    height: 200px;
+}
+
+.contents section.con3 {
+    width: 350px;
+    background: #333;
+    float: left;
+    height: 200px;
+}
+
+footer {
+    position: relative;
+    width: 1200px;
+    height: 100px;
+    background: #ddd;
+}
+
+footer h3 {
+    width: 200px;
+    padding-top: 30px;
+    float: left;
+}
+
+footer .copy_wrap {
+    width: 700px;
+    height: 100px;
+    background: #eee;
+    float: left;
+}
+
+footer .copy_wrap ul.copy{padding-top: 10px; padding-left: 70px;}
+footer .copy_wrap ul.copy li{float: left;padding-right: 40px;}
+
+
+
+
+footer .sns_wrap {
+    float: left;
+    width: 300px;
+    height: 100px;
+    background: #aaa;
+}
+
+footer .sns_wrap ul.sns {
+    width: 80%;
+    height: 75px;
+    margin: 0 auto;
+    padding-top: 25px;
+}
+
+footer .sns_wrap ul.sns li {
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin-right: 20px;
+}
+
+footer .sns_wrap ul.sns li:nth-child(1) {
+    margin-left: 25px;
+}
+
+footer .sns_wrap ul.sns li span.sns1 {
+    background: url(../images/tw.png) no-repeat 50% 50%;
+    width: 50px;
+    height: 50px;
+    -webkit-background-size: 50px;
+    background-size: 50px;
+    display: block;
+    filter: grayscale(100%);
+}
+
+footer .sns_wrap ul.sns li span.sns2 {
+    background: url(../images/fb.png) no-repeat 50% 50%;
+    width: 50px;
+    height: 50px;
+    -webkit-background-size: 50px;
+    background-size: 50px;
+    display: block;
+        filter: grayscale(100%);
+
+}
+
+footer .sns_wrap ul.sns li span.sns3 {
+    background: url(../images/ins.png) no-repeat 50% 50%;
+    width: 50px;
+    height: 50px;
+    -webkit-background-size: 50px;
+    background-size: 50px;
+    display: block;
+        filter: grayscale(100%);
+}
+
+
+footer .sns_wrap ul.sns li:hover span.sns1,
+footer .sns_wrap ul.sns li:hover span.sns2,
+footer .sns_wrap ul.sns li:hover span.sns3{
+    filter: grayscale(0%);
+}

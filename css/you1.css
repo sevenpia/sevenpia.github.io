@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+
+*{margin: 0; padding: 0;}
+ul,li{list-style: none;}
+a{text-decoration: none; color: inherit;}
+img{border: 0;}
+body{font-family: "맑은 고딕", Malgun Gothic, arial, sans-serif;}
+.clear::after{
+    content: "";
+    clear: both; 
+    display: block;
+}
+
+ul.gallery {
+    width: 600px;
+    height: 200px;
+    border: 1px solid #f00;
+    display: flex; 
+    justify-content:space-around;
+    align-items: center;
+}
+
+
+/*
+body >p> span {
+    color: #f00;
+}
+*/
+
+
+/*ul 이후의 모든 형제 p 를 의미한다. */
+ul ~ p {
+    color: #f00;
+}
+
+/*ul 이후의 바로 뒤따르는 형제 p 를 의미한다. */
+ul + p {
+    color: #00f;
+}
+
+
+
+div.box{
+    width: 500px;
+    height: 500px;
+    border: 1px solid #f00;
+    background: url(../images/banner.jpg) no-repeat;
+    background-position: left top;
+    background-size:contain;
+}

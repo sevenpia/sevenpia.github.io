@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+body {
+    /*
+    display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.ham_btn {
+    position: relative;
+    width: 45px;
+    height: 34px;
+    transition: 0.3s; 
+}
+
+.ham_btn span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    background: #666;
+    transition: 0.3s ease-in-out;
+}
+
+.ham_btn span:nth-child(1) {
+    top: 0;
+}
+
+.ham_btn span:nth-child(2),
+.ham_btn span:nth-child(3) {
+    top: 13px;
+}
+
+.ham_btn span:nth-child(4) {
+    top: 26px;
+}
+
+
+/*active 클래스 발생*/
+
+.ham_btn.active span:nth-child(1),
+.ham_btn.active span:nth-child(4){
+    opacity: 0;
+}
+
+.ham_btn.active span:nth-child(2){
+    transform: rotate(45deg);
+}
+.ham_btn.active span:nth-child(3){
+    transform: rotate(-45deg);
+}
+
+
